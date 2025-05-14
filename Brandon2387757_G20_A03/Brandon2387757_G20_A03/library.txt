@@ -1,0 +1,10 @@
+Research Paper*Attention Is All You Need*Vaswani et al.*2017*15*Introduced the Transformer architecture
+AudioBook*Becoming*Michelle Obama*2018*1140*Narrator Becoming
+AudioBook*Can't Hurt Me*David Goggins*2018*720*Narrator CantHurtMe
+eBook*Principles*Ray Dalio*2017*500*Life and work principles
+eBook*Sapiens: A Brief History of Humankind*Yuval Noah Harari*2011*498*Bestselling anthropological history
+eBook*The Art of War*Sun Tzu*2005*200*Classic Chinese military strategy
+AudioBook*The Hobbit*J.R.R. Tolkien*1937*310*Narrator TheHobbit
+eBook*The Innovator's Dilemma*Clayton Christensen*1997*250*Disruption in business innovation
+eBook*The Lean Startup*Eric Ries*2011*336*Entrepreneurship methodology
+AudioBook*The Selfish Gene*Richard Dawkins*1976*800*Narrator SelfishGene

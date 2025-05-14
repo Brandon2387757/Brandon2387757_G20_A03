@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.brandon2387757_g20_a03.BookController"
+      spacing="15" alignment="CENTER">
+
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="Load" onAction="#loadItems"/>
+            <MenuItem text="Save (Unsorted)" onAction="#saveToUnsorted"/>
+            <MenuItem text="Save (Sorted)" onAction="#saveToSorted"/>
+            <MenuItem text="Exit" onAction="#exitApp"/>
+        </Menu>
+        <Menu text="Search">
+            <MenuItem text="By Title" onAction="#searchByTitleMenu"/>
+            <MenuItem text="By Year" onAction="#searchByYearMenu"/>
+            <MenuItem text="By Format" onAction="#searchByFormatMenu"/>
+        </Menu>
+        <Menu text="Reports">
+            <MenuItem text="List All" onAction="#generateReport"/>
+            <MenuItem text="List by Year" onAction="#generateReportByYear"/>
+        </Menu>
+    </MenuBar>
+
+    <HBox spacing="30" alignment="CENTER">
+        <VBox alignment="CENTER" spacing="5">
+            <Label text="Search for:"/>
+            <TextField fx:id="searchField" promptText="Search term"/>
+            <HBox spacing="5" alignment="CENTER">
+                <RadioButton fx:id="searchByTitle" text="Title"/>
+                <RadioButton fx:id="searchByYear" text="Year"/>
+                <RadioButton fx:id="searchByFormat" text="Format"/>
+            </HBox>
+            <Button fx:id="binarySearchButton" text="Search" onAction="#binarySearch"/>
+        </VBox>
+        <VBox alignment="CENTER" spacing="5">
+            <Label text="Sort by:"/>
+            <HBox spacing="5" alignment="CENTER">
+                <RadioButton fx:id="sortByTitle" text="Title"/>
+                <RadioButton fx:id="sortByYear" text="Year"/>
+            </HBox>
+            <Button fx:id="bubbleSortButton" text="Sort" onAction="#bubbleSort"/>
+        </VBox>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="10">
+        <HBox spacing="40" alignment="CENTER">
+            <Button fx:id="addButton" text="Add" onAction="#addItem"/>
+            <Button fx:id="updateButton" text="Update" onAction="#updateItem"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#deleteItem"/>
+        </HBox>
+        <HBox spacing="20" alignment="CENTER">
+            <VBox>
+                <Label text="Title:"/>
+                <TextField fx:id="titleField" promptText="Title"/>
+            </VBox>
+            <VBox>
+                <Label text="Author:"/>
+                <TextField fx:id="authorField" promptText="Author"/>
+            </VBox>
+            <VBox>
+                <Label text="Year:"/>
+                <TextField fx:id="yearField" promptText="Year"/>
+            </VBox>
+            <VBox>
+                <Label text="Format:"/>
+                <TextField fx:id="formatField" promptText="Format"/>
+            </VBox>
+            <VBox>
+                <Label text="Pages/Duration:"/>
+                <TextField fx:id="pagesAndDurationField" promptText="Amt of pages / Minutes"/>
+            </VBox>
+            <VBox>
+                <Label text="Extra:"/>
+                <TextField fx:id="extraField" promptText="Extra"/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="250"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="250"/>
+            <TableColumn fx:id="yearColumn" text="Year" prefWidth="250"/>
+            <TableColumn fx:id="formatInfoColumn" text="Format" prefWidth="250"/>
+        </columns>
+    </TableView>
+
+    <TextArea fx:id="reportArea" editable="false" promptText="Report appears here..." minHeight="100"/>
+</VBox>
